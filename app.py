@@ -21,7 +21,7 @@ This application classifies emails as **Spam** or **Ham** (Not Spam) using the *
 def load_data():
     try:
         # Try latin-1 encoding which is common for this dataset
-        df = pd.read_csv('spam.csv', encoding='latin-1')
+        df = pd.read_csv('spam_nb.csv', encoding='latin-1')
         return df
     except Exception as e:
         st.error(f"Error loading file: {e}")
