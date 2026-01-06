@@ -20,10 +20,16 @@ This project implements a **Naive Bayes Classifier** to detect spam emails/SMS u
    python -m streamlit run app.py
    ```
 
+## 📁 Project Structure
+
+- `app.py`: Streamlit application file.
+- `naive_bayes_analysis.ipynb`: Jupyter notebook for text classification analysis.
+- `spam_nb.csv`: Dataset containing labeled messages.
+- `requirements.txt`: Python package dependencies.
+
 ## 📂 Dataset
 
-The project uses `spam.csv`. Ensure it is in the root directory.
-It contains ~5,572 messages labeled as Ham or Spam.
+The project uses `spam_nb.csv`. It contains ~5,572 messages labeled as Ham or Spam.
 
 ## 📦 Requirements
 
