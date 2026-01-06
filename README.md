@@ -1,40 +1,41 @@
-# 📧 Email Spam Detection (Naive Bayes)
+# 📧 Email Spam Detector (Naive Bayes)
 
-This project implements a **Naive Bayes Classifier** to detect spam emails/SMS using the SMS Spam Collection dataset.
+A Streamlit application that detects whether an email or SMS message is "Spam" or "Ham" (Not Spam) using a Naive Bayes Classifier.
 
-## 🚀 Features
+## 📊 Features
 
-- **Spam Classification**: Accurately classifies messages as 'Spam' or 'Ham'.
-- **Interactive UI**: Type in any message to instantly check if it's spam.
-- **Visualizations**: Message length analysis and class distribution.
+- **Spam Classification**: Instantly predicts the category of any text message entered by the user.
+- **Probability Analysis**: Uses probabilistic methods to determine the likelihood of spam.
+- **Text Visualization**: Word clouds and message length distributions for Spam vs. Ham.
+- **Real-time Training**: Trains the model on `spam_nb.csv` instantly.
 
-## 🛠️ Usage
+## 🛠️ Installation
 
-1. **Install dependencies**:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Vibin-007/naivebayes.git
+   cd naivebayes
+   ```
+
+2. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Run the App**:
+3. Run the application:
    ```bash
-   python -m streamlit run app.py
+   streamlit run app.py
    ```
 
 ## 📁 Project Structure
 
-- `app.py`: Streamlit application file.
-- `naive_bayes_analysis.ipynb`: Jupyter notebook for text classification analysis.
-- `spam_nb.csv`: Dataset containing labeled messages.
-- `requirements.txt`: Python package dependencies.
+- `app.py`: Main application file containing the Streamlit interface and logic.
+- `spam_nb.csv`: Dataset containing labeled messages (Spam/Ham).
+- `naive_bayes_analysis.ipynb`: Jupyter notebook for natural language processing and model building.
+- `requirements.txt`: List of Python dependencies.
 
-## 📂 Dataset
+## 📈 Model Information
 
-The project uses `spam_nb.csv`. It contains ~5,572 messages labeled as Ham or Spam.
-
-## 📦 Requirements
-
-- streamlit
-- pandas
-- scikit-learn
-- matplotlib
-- seaborn
+The model uses **Multinomial Naive Bayes** to classify text based on:
+- **Word Frequencies** (Count Vectorization)
+- **Message Keywords**
